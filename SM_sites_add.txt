@@ -14,3 +14,4 @@ stickam
 scribd
 slideshare
 posterous
+daily booth
