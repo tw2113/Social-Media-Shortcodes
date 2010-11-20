@@ -1,0 +1,1 @@
+As the plugin grows and adds more social media sites for the shortcode, create an options page listing them all with toggle switches. Not everyone is going to need each one enabled by default.
