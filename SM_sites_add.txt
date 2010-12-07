@@ -11,3 +11,4 @@ slashdot
 plurk
 colourlovers
 seesmic
+paper.li
