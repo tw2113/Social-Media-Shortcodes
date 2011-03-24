@@ -1,0 +1,3 @@
+As the plugin grows and adds more social media sites for the shortcode, create an options page listing them all with toggle switches. Not everyone is going to need each one enabled by default.
+
+for those sites that have user.url.com, put in an array and check? right now, url.com/user is slightly hardcoded. Put the check in the social_link_sc() function
