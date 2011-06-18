@@ -92,6 +92,12 @@ function favstarfm_sc($atts){
 function okcupid_sc($atts){
    return social_link_sc('Okcupid', 'http://www.okcupid.com/profile', $atts);
 }
+function github_sc($atts){
+	return social_link_sc('Github', 'https://github.com/', $atts);
+}
+function programmableweb_sc($atts){
+	return social_link_sc('Programmable Web', 'http://www.programmableweb.com/profile', $atts);
+}
 
 add_shortcode('twitter', 'twitter_sc');
 add_shortcode('identica', 'identica_sc');
@@ -117,5 +123,7 @@ add_shortcode('dribbble', 'dribbble_sc');
 add_shortcode('lastfm', 'lastfm_sc');
 add_shortcode('favstarfm', 'favstarfm_sc');
 add_shortcode('okcupid', 'okcupid_sc');
+add_shortcode('github', 'github_sc');
+add_shortcode('programmableweb', 'programmableweb_sc');
 
 ?>
