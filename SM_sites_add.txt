@@ -1,5 +1,4 @@
 deviantart user.deviantart.com
-tumblr user.tumblr.com
 newsvine user.newsvine.com
 posterous user.posterous.com/
 
@@ -9,6 +8,5 @@ ustream
 friendfeed
 slashdot
 plurk
-colourlovers
 seesmic
 paper.li

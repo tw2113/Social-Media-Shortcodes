@@ -98,6 +98,9 @@ function github_sc($atts){
 function programmableweb_sc($atts){
 	return social_link_sc('Programmable Web', 'http://www.programmableweb.com/profile', $atts);
 }
+function colourlovers_sc($atts){
+	return social_link_sc('Colourlovers', 'http://www.colourlovers.com/lover', $atts);
+}
 
 add_shortcode('twitter', 'twitter_sc');
 add_shortcode('identica', 'identica_sc');
@@ -125,5 +128,6 @@ add_shortcode('favstarfm', 'favstarfm_sc');
 add_shortcode('okcupid', 'okcupid_sc');
 add_shortcode('github', 'github_sc');
 add_shortcode('programmableweb', 'programmableweb_sc');
+add_shortcode('colourlovers', 'colourlovers_sc');
 
 ?>
