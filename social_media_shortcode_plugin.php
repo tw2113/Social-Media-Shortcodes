@@ -8,7 +8,7 @@ Author: Michael Beckwith
 Author URI: http://michaelbox.net
 */
 
-$my_shortcodes = array(
+$smsc_shortcodes = array(
     'identica' => array( 'Identica', 'http://identi.ca' ),
     'facebook' => array( 'Facebook', 'http://www.facebook.com' ),
     'twitter' => array( 'Twitter', 'http://twitter.com' ),
@@ -38,18 +38,18 @@ $my_shortcodes = array(
     'colourlovers' => array('Colourlovers', 'http://www.colourlovers.com/lover')
 );
      
-foreach( array_keys( $my_shortcodes ) as $shortcode )
-	add_shortcode( $shortcode, 'my_shortcode_handler' );
+foreach( array_keys( $smsc_shortcodes ) as $shortcode )
+	add_shortcode( $shortcode, 'smsc_shortcode_handler' );
      
-    function my_shortcode_handler( $atts, $enclosed, $shortcode ) {
+    function smsc_shortcode_handler( $atts, $enclosed, $shortcode ) {
             extract(shortcode_atts( array(
                     'name' => '',
                     'text' => '',
             ), $atts));
      
-            global $my_shortcodes;
-            $service = $my_shortcodes[$shortcode][0];
-            $link = $my_shortcodes[$shortcode][1];
+            global $smsc_shortcodes;
+            $service = $smsc_shortcodes[$shortcode][0];
+            $link = $smsc_shortcodes[$shortcode][1];
      
             if ( empty($text) ) $text = "$name ($service)";
      
