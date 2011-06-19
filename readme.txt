@@ -19,3 +19,5 @@ results in:
 <a href="http://www.twitter.com/JoeSomeone" title="JoeSomeone's Twitter profile\">JoeSomeone (Twitter)</a>
 
 on your post/page.
+
+June 19th Changes courtesy of Adam Harley
