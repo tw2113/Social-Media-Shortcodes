@@ -102,7 +102,7 @@ function colourlovers_sc($atts){
 	return social_link_sc('Colourlovers', 'http://www.colourlovers.com/lover', $atts);
 }
 
-//foreach
+//foreach loop
 add_shortcode('twitter', 'twitter_sc');
 add_shortcode('identica', 'identica_sc');
 add_shortcode('facebook', 'facebook_sc');
