@@ -1,4 +1,4 @@
-<?php 
+<?php
 /*
 Plugin Name: Social Media Shortcode Pack
 Plugin URI: http://michaelbox.net
