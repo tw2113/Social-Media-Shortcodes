@@ -138,6 +138,10 @@ None
 
 == Changelog ==
 
+= 1.1.1 =
+* Cleaned up code. Should not affect anything.
+* Removed: delicious, Favstar.FM, forrst, StumbleUpon.
+
 = 1.1 =
 * Rewrote the plugin as a PHP Class.
 * Added or amended three filters for developers to use: "smsc_shortcodes", "smsc_classes", "smsc_final_link"
@@ -156,6 +160,10 @@ None
 * Initial upload
 
 == Upgrade Notice ==
+
+= 1.1.1 =
+* Cleaned up code. Should not affect anything.
+* Removed: delicious, Favstar.FM, forrst, StumbleUpon.
 
 = 1.1 =
 * Rewrote the plugin as a PHP Class.
