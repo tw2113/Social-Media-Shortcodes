@@ -17,13 +17,10 @@ This plugin registers shortcodes for the following websites, social service on t
 Service / shortcode version
 
 * Colourlovers [colourlovers]
-* Delicious [delicious]
 * Digg [digg]
 * Dribbble [dribbble]
 * Facebook [facebook]
-* Favstar.FM [favstarfm]
 * Flickr [flickr]
-* Forrst [forrst]
 * Foursquare [foursquare]
 * GitHub [github]
 * Last.FM [lastfm]
@@ -34,7 +31,6 @@ Service / shortcode version
 * Reddit [reddit]
 * Scribd [scribd]
 * SlideShare [slideshare]
-* StumbleUpon [stumbleupon]
 * Twitter [twitter]
 * Vimeo [vimeo]
 * YouTube [youtube]
