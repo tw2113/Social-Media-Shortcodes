@@ -1,18 +1,41 @@
 <?php
-/*
-Plugin Name: Social Media Shortcode Pack
-Plugin URI: http://michaelbox.net
-Description: Plugin that declares shortcodes for several different social media website user profiles.
-Version: 1.1
-Author: Michael Beckwith
-Author URI: http://michaelbox.net
-*/
+/**
+ * Social Media Shortcodes.
+ *
+ * @package Social Media Shortcodes.
+ */
 
+/**
+ * Plugin Name: Social Media Shortcode Pack
+ * Plugin URI: http://michaelbox.net
+ * Description: Plugin that declares shortcodes for several different social media website user profiles.
+ * Version: 1.1.1
+ * Author: Michael Beckwith
+ * Author URI: http://michaelbox.net
+ */
+
+/**
+ * Class Social_Media_Shortcodes
+ */
 class Social_Media_Shortcodes {
 
-    public $default_sites       = array();
-    public $all_sites           = array();
+	/**
+	 * Array of default sites.
+	 *
+	 * @var array Default sites.
+	 */
+	public $default_sites = array();
 
+	/**
+	 * Array of all sites.
+	 *
+	 * @var array All sites.
+	 */
+	public $all_sites = array();
+
+	/**
+	 * Social_Media_Shortcodes constructor.
+	 */
 	public function __construct() {
 		$this->set_default_sites();
 
@@ -21,6 +44,11 @@ class Social_Media_Shortcodes {
 		$this->register_shortcodes();
 	}
 
+	/**
+	 * Sets the default sites.
+	 *
+	 * @since 1.1.0
+	 */
 	public function set_default_sites() {
 		$this->default_sites = array(
 			'colourlovers'      => array( 'Colourlovers', 'http://www.colourlovers.com/lover' ),
@@ -48,34 +76,65 @@ class Social_Media_Shortcodes {
 		);
 	}
 
+	/**
+	 * Sets all sites, as we allow custom filtered in sites.
+	 *
+	 * @since 1.1.0
+	 */
 	public function set_all_sites() {
-		$defaults = $this->default_sites;
+		$defaults        = $this->default_sites;
 		$this->all_sites = apply_filters( 'smsc_shortcodes', $defaults );
 	}
 
+	/**
+	 * Registers the shortcodes.
+	 *
+	 * @since 1.1.0
+	 */
 	public function register_shortcodes() {
 		$sites = $this->all_sites;
 
-		//wp_die(print_r($sites));
-
-		foreach( array_keys( $sites ) as $shortcode ) {
+		foreach ( array_keys( $sites ) as $shortcode ) {
 			add_shortcode( $shortcode, array( $this, 'shortcode_handler' ) );
 		}
 	}
 
+	/**
+	 * Sets the link target for a given social media site.
+	 *
+	 * @since 1.1.0
+	 *
+	 * @param string $target Target type for the link.
+	 * @return string
+	 */
 	public function get_link_target( $target = '' ) {
-		return ( in_array( $target, $this->get_available_link_targets() ) ) ? $target : '_self';
+		return ( in_array( $target, $this->get_available_link_targets(), true ) ) ? $target : '_self';
 	}
 
+	/**
+	 * Get a default list of possible targets based on W3C specification.
+	 *
+	 * @since 1.1.0
+	 *
+	 * @return array
+	 */
 	public function get_available_link_targets() {
 		return array( '_self', '_blank', '_parent', '_top' );
 	}
 
+	/**
+	 * Create a string of classes to apply to the generated markup.
+	 *
+	 * @since 1.1.0
+	 *
+	 * @param string $service Social media service that is being rendered.
+	 * @return string
+	 */
 	public function get_classes( $service ) {
 		$classes = apply_filters( 'smsc_classes',
 			array(
 				'smsc',
-				strtolower( $service ) . '_smsc'
+				strtolower( $service ) . '_smsc',
 			),
 			$service
 		);
@@ -83,31 +142,42 @@ class Social_Media_Shortcodes {
 		return implode( ' ', $classes );
 	}
 
+	/**
+	 * Creates the final output for a given service and shortcode.
+	 *
+	 * @since 1.1.0
+	 *
+	 * @param array  $atts      Array of shortcode attributes.
+	 * @param string $enclosed  Shortcode content. Not used.
+	 * @param string $shortcode The shortcode tag.
+	 *
+	 * @return mixed|string
+	 */
 	public function shortcode_handler( $atts, $enclosed, $shortcode ) {
 		$args = shortcode_atts(
 			array(
-				'name'          => '',
-				'text'          => '',
-				'target'        => '_self',
+				'name'   => '',
+				'text'   => '',
+				'target' => '_self',
 			),
 			$atts
 		);
 
-
 		$service = $this->all_sites[ $shortcode ][0];
-		$link = $this->all_sites[ $shortcode ][1];
+		$link    = $this->all_sites[ $shortcode ][1];
 		$classes = $this->get_classes( $shortcode );
-		$target = $this->get_link_target( $args['target'] );
+		$target  = $this->get_link_target( $args['target'] );
 
 		if ( empty( $args['name'] ) ) {
+			/* Translators: placeholder will have the social media site name. */
 			return sprintf( __( 'You forgot a username for the %s shortcode', 'smsc' ), $service );
 		}
 
-		$text = ( !empty( $args['text'] ) ) ? $args['text'] : $args['name'] . ' (' . $service . ')';
+		$text = ( ! empty( $args['text'] ) ) ? $args['text'] : $args['name'] . ' (' . $service . ')';
 
 		$output = sprintf( '<a href="%s" title="%s" class="%s" target="%s">%s</a>',
 			trailingslashit( $link ) . $args['name'],
-			$args['name'] .'\'s ' . $service . ' profile',
+			$args['name'] . '\'s ' . $service . ' profile',
 			$classes,
 			$target,
 			$text
@@ -117,6 +187,11 @@ class Social_Media_Shortcodes {
 	}
 }
 
+/**
+ * Start things off!
+ *
+ * @since 1.1.0
+ */
 function smsc_init() {
 	$get_social = new Social_Media_Shortcodes();
 }
