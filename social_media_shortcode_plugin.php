@@ -50,26 +50,37 @@ class Social_Media_Shortcodes {
 	 * @since 1.1.0
 	 */
 	public function set_default_sites() {
-		$this->default_sites = array(
-			'colourlovers'    => array( 'Colourlovers', 'http://www.colourlovers.com/lover' ),
-			'digg'            => array( 'Digg', 'http://digg.com/u/' ),
-			'dribbble'        => array( 'Dribbble', 'http://dribbble.com' ),
-			'facebook'        => array( 'Facebook', 'http://www.facebook.com' ),
-			'flickr'          => array( 'Flickr', 'http://www.flickr.com/photos' ),
-			'foursquare'      => array( 'Foursquare', 'http://foursquare.com' ),
-			'github'          => array( 'GitHub', 'https://github.com' ),
-			'lastfm'          => array( 'Last.FM', 'http://www.last.fm/user' ),
-			'linkedin'        => array( 'LinkedIn', 'http://www.linkedin.com/in' ),
-			'myspace'         => array( 'Myspace', 'http://www.myspace.com' ),
-			'okcupid'         => array( 'OkCupid', 'http://www.okcupid.com/profile' ),
-			'programmableweb' => array( 'Programmable Web', 'http://www.programmableweb.com/profile' ),
-			'reddit'          => array( 'Reddit', 'http://www.reddit.com/user' ),
-			'scribd'          => array( 'Scribd', 'http://www.scribd.com' ),
-			'slideshare'      => array( 'SlideShare', 'http://www.slideshare.net' ),
-			'twitter'         => array( 'Twitter', 'http://twitter.com' ),
-			'vimeo'           => array( 'Vimeo', 'http://www.vimeo.com' ),
-			'youtube'         => array( 'YouTube', 'http://www.youtube.com' ),
-		);
+		$this->default_sites = [
+			'blogger'      => [ 'Blogger', 'https://www.blogger.com/profile' ],
+			'bookhype'     => [ 'Bookhype', 'https://bookhype.com/user/show' ],
+			'colourlovers' => [ 'Colourlovers', 'https://www.colourlovers.com/lover' ],
+			'deviantart'   => [ 'Deviantart', 'https://www.deviantart.com' ],
+			'digg'         => [ 'Digg', 'https://digg.com/@' ],
+			'dribbble'     => [ 'Dribbble', 'https://dribbble.com' ],
+			'etsy'         => [ 'Etsy', 'https://www.etsy.com/people' ],
+			'facebook'     => [ 'Facebook', 'https://www.facebook.com' ],
+			'flickr'       => [ 'Flickr', 'https://www.flickr.com/photos' ],
+			'flipboard'    => [ 'Flipboard', 'https://flipboard.com/@' ],
+			'github'       => [ 'GitHub', 'https://github.com' ],
+			'goodreads'    => [ 'Goodreads', 'https://www.goodreads.com/user/show' ],
+			'hackernews'   => [ 'Hackernews', 'https://news.ycombinator.com/user?id=' ],
+			'imdb'         => [ 'IMDb', 'https://www.imdb.com/user' ],
+			'instagram'    => [ 'Instagram', 'https://www.instagram.com' ],
+			'lastfm'       => [ 'Last.FM', 'https://www.last.fm/user' ],
+			'linkedin'     => [ 'LinkedIn', 'https://www.linkedin.com/in' ],
+			'myspace'      => [ 'Myspace', 'https://www.myspace.com' ],
+			'patreon'      => [ 'Patreon', 'https://www.patreon.com' ],
+			'pinterest'    => [ 'Pinterest', 'https://www.pinterest.com' ],
+			'reddit'       => [ 'Reddit', 'https://www.reddit.com/user' ],
+			'slideshare'   => [ 'SlideShare', 'https://www.slideshare.net' ],
+			'soundcloud'   => [ 'Soundcloud', 'https://soundcloud.com' ],
+			'tiktok'       => [ 'TikTok', 'https://www.tiktok.com/@' ],
+			'twitch'       => [ 'Twitch', 'https://www.twitch.tv' ],
+			'twitter'      => [ 'Twitter', 'https://twitter.com' ],
+			'vimeo'        => [ 'Vimeo', 'https://www.vimeo.com' ],
+			'yelp'         => [ 'Yelp', 'https://www.yelp.com/user_details?userid=' ],
+			'youtube'      => [ 'YouTube', 'https://www.youtube.com/c' ],
+		];
 	}
 
 	/**
