@@ -1,12 +1,12 @@
 === Social Media Shortcode Pack ===
 Contributors: tw2113
 Tags: social media, shortcodes
-Requires at least: 3.7
-Tested up to: 4.9.8
-Stable tag: 1.1.1
+Requires at least: 5.2
+Tested up to: 6.1
+Stable tag: 1.2.0
 License: WTFPL
 License URI: http://sam.zoy.org/wtfpl/
-Requires PHP: 5.2
+Requires PHP: 5.6
 
 Registers shortcodes for your posts, pages, or post types that display user profile links to various social media websites.
 
@@ -134,6 +134,11 @@ None
 
 == Changelog ==
 
+= 1.2.0 =
+* Added: Blogger, BookHype, DeviantArt, Etsy, Flipboard, Goodreads, HackerNews, IMDb, Instagram, Patreon, Pinterest, Soundcloud, TikTok, Twitch, Yelp
+* Removed: Foursquare, OKCupid, ProgrammableWeb, Scribd
+* Updated: Cleaned up more code to modernize.
+
 = 1.1.1 =
 * Cleaned up code. Should not affect anything.
 * Removed: delicious, Favstar.FM, forrst, StumbleUpon.
@@ -156,6 +161,11 @@ None
 * Initial upload
 
 == Upgrade Notice ==
+
+= 1.2.0 =
+* Added: Blogger, BookHype, DeviantArt, Etsy, Flipboard, Goodreads, HackerNews, IMDb, Instagram, Patreon, Pinterest, Soundcloud, TikTok, Twitch, Yelp
+* Removed: Foursquare, OKCupid, ProgrammableWeb, Scribd
+* Updated: Cleaned up more code to modernize.
 
 = 1.1.1 =
 * Cleaned up code. Should not affect anything.
