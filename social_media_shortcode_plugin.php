@@ -24,14 +24,14 @@ class Social_Media_Shortcodes {
 	 *
 	 * @var array Default sites.
 	 */
-	public $default_sites = array();
+	public $default_sites = [];
 
 	/**
 	 * Array of all sites.
 	 *
 	 * @var array All sites.
 	 */
-	public $all_sites = array();
+	public $all_sites = [];
 
 	/**
 	 * Social_Media_Shortcodes constructor.
@@ -91,7 +91,7 @@ class Social_Media_Shortcodes {
 		$sites = $this->all_sites;
 
 		foreach ( array_keys( $sites ) as $shortcode ) {
-			add_shortcode( $shortcode, array( $this, 'shortcode_handler' ) );
+			add_shortcode( $shortcode, [ $this, 'shortcode_handler' ] );
 		}
 	}
 
@@ -115,7 +115,7 @@ class Social_Media_Shortcodes {
 	 * @return array
 	 */
 	public function get_available_link_targets() {
-		return array( '_self', '_blank', '_parent', '_top' );
+		return [ '_self', '_blank', '_parent', '_top' ];
 	}
 
 	/**
@@ -151,11 +151,11 @@ class Social_Media_Shortcodes {
 	 */
 	public function shortcode_handler( $atts, $enclosed, $shortcode ) {
 		$args = shortcode_atts(
-			array(
+			[
 				'name'   => '',
 				'text'   => '',
 				'target' => '_self',
-			),
+			],
 			$atts
 		);
 
