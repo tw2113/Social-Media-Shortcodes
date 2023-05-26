@@ -177,7 +177,7 @@ class Social_Media_Shortcodes {
 
 		if ( empty( $args['name'] ) ) {
 			/* Translators: placeholder will have the social media site name. */
-			return sprintf( __( 'You forgot a username for the %s shortcode', 'smsc' ), $service );
+			return sprintf( esc_html__( 'You forgot a username for the %s shortcode', 'smsc' ), $service );
 		}
 
 		$text = ( ! empty( $args['text'] ) ) ? $args['text'] : $args['name'] . ' (' . $service . ')';
