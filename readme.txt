@@ -50,33 +50,39 @@ All examples updated for v1.1
 
 Example 1:
 
-`[twitter name="JoeSomeone" text="some text you want the link to appear as"]`
+```
+[twitter name="JoeSomeone" text="some text you want the link to appear as"]
+```
 
-results in:
+results in this on your post/page:
 
-`<a href="http://www.twitter.com/JoeSomeone" title="JoeSomeone's Twitter profile\" class="twitter_smsc">some text you want the link to appear as</a>`
-
-on your post/page
+```
+<a href="http://www.twitter.com/JoeSomeone" title="JoeSomeone's Twitter profile" class="twitter_smsc">some text you want the link to appear as</a>
+```
 
 Example 2:
 
-`[twitter name="JoeSomeone"]`
+```
+[twitter name="JoeSomeone"]
+```
 
-results in:
+results in this on your post/page.
 
-`<a href="http://www.twitter.com/JoeSomeone" title="JoeSomeone's Twitter profile\" class="twitter_smsc">JoeSomeone (Twitter)</a>`
-
-on your post/page.
+```
+<a href="http://www.twitter.com/JoeSomeone" title="JoeSomeone's Twitter profile" class="twitter_smsc">JoeSomeone (Twitter)</a>
+```
 
 Example 3:
 
-`[twitter name="JoeSomeone" target="_blank"]`
+```
+[twitter name="JoeSomeone" target="_blank"]
+```
 
-results in:
+results in on your post/page.:
 
-`<a href="http://www.twitter.com/JoeSomeone" title="JoeSomeone's Twitter profile\" target="_blank" class="twitter_smsc">JoeSomeone (Twitter)</a>`
-
-on your post/page.
+```
+<a href="http://www.twitter.com/JoeSomeone" title="JoeSomeone's Twitter profile" target="_blank" class="twitter_smsc">JoeSomeone (Twitter)</a>
+```
 
 == Installation ==
 
@@ -90,7 +96,7 @@ on your post/page.
 
 ### How to use the provided filters
 
-`
+```
 function example_add_site( $sites ) {
 	/*
 	$sites is going to be an array of arrays.
@@ -137,7 +143,7 @@ function example_change_final_link( $output, $shortcode ) {
 	return $output_new;
 }
 add_filter( 'smsc_final_link', 'example_change_final_link', 10, 2 );
-`
+```
 
 == Screenshots ==
 
