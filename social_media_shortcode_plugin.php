@@ -9,7 +9,7 @@
  * Plugin Name: Social Media Shortcodes
  * Plugin URI: http://michaelbox.net
  * Description: Easily link to your social media profiles via shortcode.
- * Version: 1.2.0
+ * Version: 1.2.1
  * Author: Michael Beckwith
  * Author URI: http://michaelbox.net
  */
