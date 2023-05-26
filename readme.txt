@@ -1,9 +1,9 @@
-=== Social Media Shortcode Pack ===
+=== Social Media Shortcodes ===
 Contributors: tw2113
 Tags: social media, shortcodes
 Requires at least: 5.2
-Tested up to: 6.1
-Stable tag: 1.2.0
+Tested up to: 6.2.2
+Stable tag: 1.2.1
 License: WTFPL
 License URI: http://sam.zoy.org/wtfpl/
 Requires PHP: 5.6
@@ -144,6 +144,9 @@ add_filter( 'smsc_final_link', 'example_change_final_link', 10, 2 );
 None
 
 == Changelog ==
+
+= 1.2.1 =
+* Updated: confirmed WP 6.2.2 compatibility.
 
 = 1.2.0 =
 * Added: Blogger, BookHype, DeviantArt, Etsy, Flipboard, Goodreads, HackerNews, IMDb, Instagram, Patreon, Pinterest, Soundcloud, TikTok, Twitch, Yelp
