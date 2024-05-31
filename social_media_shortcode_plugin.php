@@ -9,7 +9,7 @@
  * Plugin Name: Social Media Shortcodes
  * Plugin URI: http://michaelbox.net
  * Description: Easily link to your social media profiles via shortcode.
- * Version: 1.2.1
+ * Version: 1.3.0
  * Author: Michael Beckwith
  * Author URI: http://michaelbox.net
  */
@@ -73,13 +73,15 @@ class Social_Media_Shortcodes {
 			'pinterest'    => [ 'Pinterest', 'https://www.pinterest.com' ],
 			'reddit'       => [ 'Reddit', 'https://www.reddit.com/user' ],
 			'slideshare'   => [ 'SlideShare', 'https://www.slideshare.net' ],
+			'spacehey'     => [ 'SpaceHey', 'https://spacehey.com' ],
 			'soundcloud'   => [ 'Soundcloud', 'https://soundcloud.com' ],
 			'tiktok'       => [ 'TikTok', 'https://www.tiktok.com/@' ],
 			'twitch'       => [ 'Twitch', 'https://www.twitch.tv' ],
 			'twitter'      => [ 'Twitter', 'https://twitter.com' ],
 			'vimeo'        => [ 'Vimeo', 'https://www.vimeo.com' ],
+			'x'            => [ 'X', 'https://x.com'],
 			'yelp'         => [ 'Yelp', 'https://www.yelp.com/user_details?userid=' ],
-			'youtube'      => [ 'YouTube', 'https://www.youtube.com/c' ],
+			'youtube'      => [ 'YouTube', 'https://www.youtube.com/@' ],
 		];
 	}
 
