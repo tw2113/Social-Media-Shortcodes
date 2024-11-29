@@ -2,8 +2,8 @@
 Contributors: tw2113
 Tags: social media, shortcodes
 Requires at least: 5.2
-Tested up to: 6.5.3
-Stable tag: 1.3.0
+Tested up to: 6.7.1
+Stable tag: 1.3.1
 License: WTFPL
 License URI: http://sam.zoy.org/wtfpl/
 Requires PHP: 5.6
@@ -115,6 +115,9 @@ add_filter( 'smsc_final_link', 'example_change_final_link', 10, 2 );
 None
 
 == Changelog ==
+
+= 1.3.1=
+* Updated: Handle some security issues with link output.
 
 = 1.3.0 =
 * Added: X and SpaceHey.

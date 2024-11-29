@@ -9,7 +9,7 @@
  * Plugin Name: Social Media Shortcodes
  * Plugin URI: http://michaelbox.net
  * Description: Easily link to your social media profiles via shortcode.
- * Version: 1.3.0
+ * Version: 1.3.1
  * Author: Michael Beckwith
  * Author URI: http://michaelbox.net
  */
@@ -185,8 +185,8 @@ class Social_Media_Shortcodes {
 		$text = ( ! empty( $args['text'] ) ) ? $args['text'] : $args['name'] . ' (' . $service . ')';
 
 		$output = sprintf( '<a href="%s" title="%s" class="%s" target="%s">%s</a>',
-			trailingslashit( $link ) . $args['name'],
-			$args['name'] . '\'s ' . $service . ' profile',
+			esc_url( trailingslashit( $link ) . $args['name'] ),
+			esc_attr( $args['name'] . '\'s ' . $service . ' profile' ),
 			$classes,
 			$target,
 			$text
