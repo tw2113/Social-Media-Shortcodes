@@ -187,8 +187,8 @@ class Social_Media_Shortcodes {
 		$output = sprintf( '<a href="%s" title="%s" class="%s" target="%s">%s</a>',
 			esc_url( trailingslashit( $link ) . $args['name'] ),
 			esc_attr( $args['name'] . '\'s ' . $service . ' profile' ),
-			$classes,
-			$target,
+			esc_attr( $classes ),
+			esc_attr( $target ),
 			esc_html( $text )
 		);
 
