@@ -2,8 +2,8 @@
 Contributors: tw2113
 Tags: social media, shortcodes
 Requires at least: 5.2
-Tested up to: 6.7.1
-Stable tag: 1.3.1
+Tested up to: 6.8.2
+Stable tag: 1.3.2
 License: WTFPL
 License URI: http://sam.zoy.org/wtfpl/
 Requires PHP: 5.6
@@ -116,7 +116,10 @@ None
 
 == Changelog ==
 
-= 1.3.1=
+= 1.3.2 =
+* Updated: Link text escaping for security issues.
+
+= 1.3.1 =
 * Updated: Handle some security issues with link output.
 
 = 1.3.0 =
@@ -135,7 +138,7 @@ None
 * Cleaned up code. Should not affect anything.
 * Removed: delicious, Favstar.FM, forrst, StumbleUpon.
 
-= 1.1 =
+= 1.1.0 =
 * Rewrote the plugin as a PHP Class.
 * Added or amended three filters for developers to use: "smsc_shortcodes", "smsc_classes", "smsc_final_link"
 * Updated default site list
@@ -149,37 +152,10 @@ None
 = 1.0.1 =
 * Added filter for users to add their own sites.
 
-= 1.0 =
+= 1.0.0 =
 * Initial upload
 
 == Upgrade Notice ==
 
-= 1.3.0 =
-* Added: X and SpaceHey.
-* Updated: confirmed 6.5.3 compatibility.
-
-= 1.2.1 =
-* Updated: confirmed WP 6.2.2 compatibility.
-
-= 1.2.0 =
-* Added: Blogger, BookHype, DeviantArt, Etsy, Flipboard, Goodreads, HackerNews, IMDb, Instagram, Patreon, Pinterest, Soundcloud, TikTok, Twitch, Yelp
-* Removed: Foursquare, OKCupid, ProgrammableWeb, Scribd
-* Updated: Cleaned up more code to modernize.
-
-= 1.1.1 =
-* Cleaned up code. Should not affect anything.
-* Removed: delicious, Favstar.FM, forrst, StumbleUpon.
-
-= 1.1 =
-* Rewrote the plugin as a PHP Class.
-* Added or amended three filters for developers to use: "smsc_shortcodes", "smsc_classes", "smsc_final_link"
-* Updated default site list
-
-= 1.01 =
-Just a new filter to add your own sites with.
-
-= 1.0.2 =
-* Added is_array() check after filter and some function documentation.
-
-= 1.0.3 =
-* Added class output for the links and optional browser window target for shortcode.
+= 1.3.2 =
+* Security updates
