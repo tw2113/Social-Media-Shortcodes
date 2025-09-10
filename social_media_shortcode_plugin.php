@@ -189,7 +189,7 @@ class Social_Media_Shortcodes {
 			esc_attr( $args['name'] . '\'s ' . $service . ' profile' ),
 			$classes,
 			$target,
-			$text
+			esc_html( $text )
 		);
 
 		return apply_filters( 'smsc_final_link', $output, $shortcode );
